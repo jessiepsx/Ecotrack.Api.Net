@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Ecotrack.Api.Net.Controllers;
 using Ecotrack.Api.Net.Services;
 using Ecotrack.Api.Net.ViewModel;
+using Xunit;
 
 namespace Ecotrack.Tests
 {

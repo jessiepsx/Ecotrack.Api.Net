@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Ecotrack.Api.Net\Ecotrack.Api.Net.csproj" />
+	  <ProjectReference Include="..\Ecotrack.Api.Net.csproj" />
   </ItemGroup>
 
 </Project>
