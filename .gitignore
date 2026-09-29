@@ -1,0 +1,23 @@
+# Arquivos de ambiente e secrets
+.env
+.env.*
+!.env.example
+
+# Build
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Testes
+TestResults/
+
+# VS Code
+.vscode/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
