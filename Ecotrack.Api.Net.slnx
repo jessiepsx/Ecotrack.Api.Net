@@ -1,4 +1,4 @@
 <Solution>
-  <Project Path="../Ecotrack.Tests/Ecotrack.Tests.csproj" />
   <Project Path="Ecotrack.Api.Net.csproj" />
+  <Project Path="Ecotrack.Tests/Ecotrack.Tests.csproj" />
 </Solution>
