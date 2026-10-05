@@ -2,6 +2,10 @@
 
 # Esta fase é usada durante a execução no VS no modo rápido (Padrão para a configuração de Depuração)
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+
+RUN mkdir -p /home/app/.aspnet/DataProtection-Keys \
+    && chown -R $APP_UID:$APP_UID /home/app/.aspnet
+
 USER $APP_UID
 WORKDIR /app
 EXPOSE 8080
