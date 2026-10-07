@@ -29,3 +29,25 @@ jobs:
 
       - name: Executar testes
         run: dotnet test --no-build --configuration Release
+
+  deploy-staging:
+    needs: build-and-test
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    environment: staging
+
+    steps:
+      - name: Deploy para Staging
+        run: |
+          curl -X POST "${{ secrets.RENDER_DEPLOY_HOOK_URL }}"
+
+  deploy-production:
+    needs: deploy-staging
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+      - name: Deploy para Production
+        run: |
+          curl -X POST "${{ secrets.RENDER_DEPLOY_HOOK_URL }}"
